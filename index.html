@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>影子怪物</title>
+	<style>
+		body {
+			background-color: rgb(0, 0, 0);
+		}
+		.container {
+			display:flex;
+			justify-content:center;
+			align-items:center;
+		}
+		.container-counter {
+			font-size: 3em;
+			color: rgb(255, 255, 255);
+		}
+		.center-image {
+			position: absolute;
+			max-width: 75%;
+			max-height: 75%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h3 id="counter" class="container-counter"></h3>
+		<img class="center-image" src="assets\image\poster.jpg" alt="Center Animation">
+	</div>
+
+	<script type="text/javascript">
+		let initial_counter = 6 //seconds
+		let timeoutID = setTimeout(redirectURL, initial_counter * 1000); //millisecond
+
+		function redirectURL() {
+		    window.location = 'https://www.instagram.com/shadow_monster_ing/';
+		}
+
+		let intervalID = setInterval(() => {
+			initial_counter -= 1;
+    		document.getElementById("counter").innerHTML = initial_counter
+    		if (initial_counter <= 0) {
+    			clearInterval(intervalID)
+    		}
+		}, 1000);
+	</script>
+	
+</body>
+</html>
