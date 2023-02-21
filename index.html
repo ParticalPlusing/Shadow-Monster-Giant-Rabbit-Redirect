@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Shadow Monster -> Time 🐰 Dance">
+	<meta name="description" content="Shadow Monster 影子怪物">
 	<title>影子怪物</title>
 	<style>
 		body {
@@ -16,8 +16,8 @@
 		}
 		.center-image {
 			position: absolute;
-			max-width: 75%;
-			max-height: 75%;
+			max-width: 65%;
+			max-height: 65%;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
@@ -26,7 +26,7 @@
 </head>
 <body>
 	<div class="container">
-		<img class="center-image" src="assets\image\poster2.gif" alt="Center Animation">
+		<img class="center-image" src="assets\image\poster2 cropped.gif" alt="Center Animation">
 	</div>
 
 	<script type="text/javascript">
@@ -36,14 +36,6 @@
 		function redirectURL() {
 		    window.location = 'https://www.instagram.com/shadow_monster_ing/';
 		}
-
-		let intervalID = setInterval(() => {
-			initial_counter -= 1;
-    		document.getElementById("counter").innerHTML = initial_counter
-    		if (initial_counter <= 0) {
-    			clearInterval(intervalID)
-    		}
-		}, 1000);
 	</script>
 	
 </body>
